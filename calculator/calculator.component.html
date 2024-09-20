@@ -1,0 +1,21 @@
+<div>
+    <label for="number1">Enter first number:</label>
+    <input type="number" [(ngModel)]="number1" id="number1">
+  </div>
+  
+  <div>
+    <label for="number2">Enter second number:</label>
+    <input type="number" [(ngModel)]="number2" id="number2">
+  </div>
+  
+  <div>
+    <button (click)="calculate('add')">Add</button>
+    <button (click)="calculate('subtract')">Subtract</button>
+    <button (click)="calculate('multiply')">Multiply</button>
+    <button (click)="calculate('divide')">Divide</button>
+  </div>
+  
+  <div *ngIf="result !== null">
+    <p>Result: {{ result }}</p>
+  </div>
+  
