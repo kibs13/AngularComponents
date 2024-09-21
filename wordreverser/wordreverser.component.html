@@ -1,0 +1,13 @@
+<div>
+    <label for="inputWord">Enter a word:</label>
+    <input type="text" [(ngModel)]="inputWord" id="inputWord" placeholder="Enter a word">
+  </div>
+  
+  <div>
+    <button (click)="reverseWord()">Reverse Word</button>
+  </div>
+  
+  <div *ngIf="reversedWord !== null">
+    <p>The reversed word is: {{ reversedWord }}</p>
+  </div>
+  
