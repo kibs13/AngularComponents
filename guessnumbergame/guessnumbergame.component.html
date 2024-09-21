@@ -1,0 +1,22 @@
+<div>
+    <h2>Number Guessing Game</h2>
+  
+    <div *ngIf="!gameOver">
+      <label for="guessInput">Enter your guess (between 1 and 100):</label>
+      <input type="number" [(ngModel)]="userGuess" id="guessInput" />
+      <button (click)="checkGuess()">Submit Guess</button>
+  
+      <div *ngIf="message">
+        <p>{{ message }}</p>
+      </div>
+  
+      <p>Number of attempts: {{ attempts }}</p>
+    </div>
+  
+    <div *ngIf="gameOver">
+      <p>You've guessed the number! It was {{ randomNumber }}.</p>
+      <p>Attempts: {{ attempts }}</p>
+      <button (click)="resetGame()">Play Again</button>
+    </div>
+  </div>
+  
