@@ -1,0 +1,21 @@
+<div>
+    <h2>Multiplication Checker</h2>
+  
+    <!-- Input Fields -->
+    <div>
+      <label for="numberInput">Number:</label>
+      <input type="number" [(ngModel)]="number" id="numberInput" placeholder="Enter a number" />
+  
+      <label for="multipleInput">Check if it's a multiple of:</label>
+      <input type="number" [(ngModel)]="multipleOf" id="multipleInput" placeholder="Enter another number" />
+    </div>
+  
+    <!-- Check Button -->
+    <button (click)="checkMultiple()">Check</button>
+  
+    <!-- Display Result -->
+    <div *ngIf="resultMessage">
+      <p>{{ resultMessage }}</p>
+    </div>
+  </div>
+  
