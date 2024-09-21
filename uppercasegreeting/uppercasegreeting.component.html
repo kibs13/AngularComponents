@@ -1,0 +1,18 @@
+<div>
+    <h2>Uppercase Greeting</h2>
+  
+    <!-- Input field for the user to input their name -->
+    <div>
+      <label for="nameInput">Enter your name:</label>
+      <input type="text" [(ngModel)]="name" id="nameInput" placeholder="Enter your name" />
+    </div>
+  
+    <!-- Button to display the name in uppercase -->
+    <button (click)="convertToUppercase()">Show Uppercase Name</button>
+  
+    <!-- Display the uppercase name -->
+    <div *ngIf="uppercaseName">
+      <p>Your name in uppercase: {{ uppercaseName }}</p>
+    </div>
+  </div>
+  
