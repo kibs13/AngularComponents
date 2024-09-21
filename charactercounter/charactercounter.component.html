@@ -1,0 +1,9 @@
+<div>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" [(ngModel)]="inputString" id="inputString" placeholder="Type something...">
+  </div>
+  
+  <div *ngIf="inputString">
+    <p>Number of characters: {{ inputString.length }}</p>
+  </div>
+  
