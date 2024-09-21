@@ -1,0 +1,22 @@
+<div>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" [(ngModel)]="loginData.email" name="email" id="email" required>
+      </div>
+  
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" [(ngModel)]="loginData.password" name="password" id="password" required>
+      </div>
+  
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  
+  <div *ngIf="submitted">
+    <h3>Login Data:</h3>
+    <p><strong>Email:</strong> {{ loginData.email }}</p>
+    <p><strong>Password:</strong> {{ loginData.password }}</p>
+  </div>
+  
