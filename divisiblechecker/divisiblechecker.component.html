@@ -1,0 +1,24 @@
+<div>
+    <h2>Divisible Checker</h2>
+  
+    <!-- Input fields for two numbers -->
+    <div>
+      <label for="firstNumber">Enter the first number:</label>
+      <input type="number" [(ngModel)]="firstNumber" id="firstNumber" placeholder="First number" />
+    </div>
+  
+    <div>
+      <label for="secondNumber">Enter the second number:</label>
+      <input type="number" [(ngModel)]="secondNumber" id="secondNumber" placeholder="Second number" />
+    </div>
+  
+    <!-- Button to check if the first number is divisible by the second -->
+    <button (click)="checkDivisibility()">Check Divisibility</button>
+  
+    <!-- Display the result -->
+    <div *ngIf="isDivisible !== null">
+      <p *ngIf="isDivisible">Yes, {{ firstNumber }} is divisible by {{ secondNumber }}.</p>
+      <p *ngIf="!isDivisible">No, {{ firstNumber }} is not divisible by {{ secondNumber }}.</p>
+    </div>
+  </div>
+  
