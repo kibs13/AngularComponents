@@ -1,0 +1,19 @@
+<div>
+    <h2>Fibonacci Number Generator</h2>
+  
+    <!-- Input Field -->
+    <div>
+      <label for="numberInput">Enter a number (N):</label>
+      <input type="number" [(ngModel)]="number" id="numberInput" placeholder="Enter N" min="1" />
+    </div>
+  
+    <!-- Generate Button -->
+    <button (click)="generateFibonacci()">Generate Fibonacci</button>
+  
+    <!-- Display Result -->
+    <div *ngIf="fibonacciNumbers.length > 0">
+      <h3>First {{ number }} Fibonacci Numbers:</h3>
+      <p>{{ fibonacciNumbers.join(', ') }}</p>
+    </div>
+  </div>
+  
