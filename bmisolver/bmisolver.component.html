@@ -1,0 +1,25 @@
+<div>
+    <h2>BMI Calculator</h2>
+  
+    <!-- Input Fields -->
+    <div>
+      <label for="heightInput">Height (m):</label>
+      <input type="number" [(ngModel)]="height" id="heightInput" placeholder="Enter height in meters" />
+  
+      <label for="weightInput">Weight (kg):</label>
+      <input type="number" [(ngModel)]="weight" id="weightInput" placeholder="Enter weight in kilograms" />
+    </div>
+  
+    <!-- Calculate Button -->
+    <button (click)="calculateBMI()">Calculate BMI</button>
+  
+    <!-- Display Result -->
+    <div *ngIf="bmi !== null">
+      <p>Your BMI: {{ bmi | number: '1.1-1' }}</p>
+      <p *ngIf="bmi < 18.5">Status: Underweight</p>
+      <p *ngIf="bmi >= 18.5 && bmi < 24.9">Status: Normal weight</p>
+      <p *ngIf="bmi >= 25 && bmi < 29.9">Status: Overweight</p>
+      <p *ngIf="bmi >= 30">Status: Obesity</p>
+    </div>
+  </div>
+  
