@@ -1,0 +1,24 @@
+<div>
+    <h2>Simple Interest Calculator</h2>
+  
+    <!-- Input Fields -->
+    <div>
+      <label for="principalInput">Principal (P):</label>
+      <input type="number" [(ngModel)]="principal" id="principalInput" placeholder="Enter principal amount" />
+  
+      <label for="rateInput">Rate (R):</label>
+      <input type="number" [(ngModel)]="rate" id="rateInput" placeholder="Enter rate of interest (%)" />
+  
+      <label for="timeInput">Time (T):</label>
+      <input type="number" [(ngModel)]="time" id="timeInput" placeholder="Enter time (years)" />
+    </div>
+  
+    <!-- Calculate Button -->
+    <button (click)="calculateInterest()">Calculate Interest</button>
+  
+    <!-- Display Result -->
+    <div *ngIf="interest !== null">
+      <p>Simple Interest: {{ interest | currency }}</p>
+    </div>
+  </div>
+  
